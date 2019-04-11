@@ -11,7 +11,55 @@ export const stageData = {
   value: {
     title: "Choose Artwork Value",
     questionText:
-      "On average, artwork created in the past five years has been priced at $. What price would you assign to this artwork, if it were being sold at a gallery in a major city?"
+      "On average, artwork created in the past five years has been priced at $. What price would you assign to this artwork, if it were being sold at a gallery in a major city?",
+    expertOptions: [
+      {
+        id: "tier1",
+        name: "$0 - 100"
+      },
+      {
+        id: "tier2",
+        name: "$101 - 1,000"
+      },
+      {
+        id: "tier3",
+        name: "$1,001 - 5,000"
+      },
+      {
+        id: "tier4",
+        name: "$5,001 - 10,000"
+      },
+      {
+        id: "tier5",
+        name: "$10,001 - 50,000"
+      },
+      {
+        id: "tier6",
+        name: "$50,001 - 100,000"
+      },
+      {
+        id: "tier7",
+        name: "$100,001 - 500,000"
+      },
+      {
+        id: "tier8",
+        name: "Over $500,000"
+      }
+    ],
+    layOptions: [
+      {
+        id: "below",
+        name: "Below Average"
+      },
+      {
+        id: "average",
+        name: "Average"
+      },
+      {
+        id: "above",
+        name: "Above average"
+      }
+    ]
   },
   preference: {
     title: "Choose Your Preference",

@@ -50,37 +50,30 @@ export default class TaskResponseValue extends React.Component {
       this.state.prepopulate = false;
     }
 
+    var options = [];
+    _.each(round.get("valueOptions"), option => {
+      options.push(
+        <Radio
+          selected={checkedOption}
+          name="checkedOption"
+          value={option.id}
+          label={option.name}
+          onChange={this.handleChange}
+        />
+      );
+    });
+
     return (
       <div className="task-response">
         <form onSubmit={this.handleSubmit}>
           <RadioGroup
             inline={false}
-            label="On average, artwork created in the past five years has been priced at $. What price would you assign to this artwork, if it were being sold at a gallery in a major city?"
+            label={stage.get("questionText")}
             name="checkedOption"
             onChange={this.handleChange}
             selectedValue={checkedOption}
           >
-            <Radio
-              selected={checkedOption}
-              name="checkedOption"
-              value="belowAverage"
-              label="Below Average"
-              onChange={this.handleChange}
-            />
-            <Radio
-              selected={checkedOption}
-              name="checkedOption"
-              value="average"
-              label="Average"
-              onChange={this.handleChange}
-            />
-            <Radio
-              selected={checkedOption}
-              name="checkedOption"
-              value="aboveAverage"
-              label="Above Average"
-              onChange={this.handleChange}
-            />
+            {options}
           </RadioGroup>
 
           {readonly ? (

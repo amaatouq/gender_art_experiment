@@ -25,6 +25,7 @@ Empirica.gameInit(game => {
   const probRelatedFemale = game.treatment.probabilityFemaleRelated || 0.5;
   const probRelatedMale =
     game.treatment.probabilityMaleRelated || 1 - probRelatedFemale;
+  const experts = game.treatment.experts || false;
 
   for (let i = 0; i < roundCount; i++) {
     //it is better to use _.shuffle() outside the loop to shuffle things .. so we don't sample the same art work twice
@@ -54,6 +55,7 @@ Empirica.gameInit(game => {
             ? randomArtwork.relatedArtists.male
             : randomArtwork.relatedArtists.mix,
         relevantQualities: randomArtwork.relevantQualties,
+        valueOptions: experts ? stageData.value.expertOptions : stageData.value.layOptions,
         imagePath: randomArtwork.imagepath
       }
     });
