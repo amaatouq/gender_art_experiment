@@ -1,0 +1,118 @@
+treatments:
+  - name: solo
+    factorIds:
+      - meN9ofzfswDcARPqa
+      - QkbsZs8jTKgxwbvLv
+      - xZiisde3KGRydLRBo
+      - CphqLGRiKNYFDdZeH
+      - 8vJC47d5obRXwsQKT
+      - 3uo3hCMwsFJL6KxCy
+      - B3RmshyvQa6nHm8HJ
+  - name: pair
+    factorIds:
+      - 5k8SoyZxMyuJSQvbp
+      - QkbsZs8jTKgxwbvLv
+      - xZiisde3KGRydLRBo
+      - CphqLGRiKNYFDdZeH
+      - 8vJC47d5obRXwsQKT
+      - 3uo3hCMwsFJL6KxCy
+      - B3RmshyvQa6nHm8HJ
+factorTypes:
+  - _id: p2XsPeiwemNGwwbR3
+    name: playerCount
+    description: The Number of players participating in the given game.
+    required: true
+    type: Integer
+    min: 1
+  - _id: PWG9AWrkgTN8nR6Hc
+    name: roundCount
+    description: The Number of rounds (paintings) in the game.
+    required: false
+    type: Integer
+    min: 1
+    max: 50
+  - _id: DfYptaNxGjSdo8z4m
+    name: probabilityFemaleArtist
+    description: The probability that the artist name displayed is female.
+    required: false
+    type: Number
+    min: 0
+    max: 1
+  - _id: p8CseLSzux9CvRhNS
+    name: probabilityFemaleRelated
+    description: The probability that all of the related artist names are female.
+    required: false
+    type: Number
+    min: 0
+    max: 1
+  - _id: NGdFAQk9xLPZ54fwj
+    name: probabilityMaleRelated
+    description: The probability that all of the related artist names are male.
+    required: false
+    type: Number
+    min: 0
+    max: 1
+  - _id: pEoshBb7McqXGWfnw
+    name: stageLength
+    description: The length in seconds of an individual stage.
+    required: false
+    type: Number
+    min: 0
+    max: 12000000
+  - _id: u6BmZrCa6d7nDPaA3
+    name: socialStageLength
+    description: The length in seconds of a social stage.
+    required: false
+    type: Number
+    min: 0
+    max: 12000000
+factors:
+  - _id: meN9ofzfswDcARPqa
+    name: solo
+    value: 1
+    factorTypeId: p2XsPeiwemNGwwbR3
+  - _id: 5k8SoyZxMyuJSQvbp
+    name: dyad
+    value: 2
+    factorTypeId: p2XsPeiwemNGwwbR3
+  - _id: ER3JHkPCJZXrrjxbH
+    name: group
+    value: 3
+    factorTypeId: p2XsPeiwemNGwwbR3
+  - _id: HSaviQYhtHQbuuowD
+    name: short
+    value: 3
+    factorTypeId: PWG9AWrkgTN8nR6Hc
+  - _id: QkbsZs8jTKgxwbvLv
+    name: long
+    value: 10
+    factorTypeId: PWG9AWrkgTN8nR6Hc
+  - _id: xZiisde3KGRydLRBo
+    name: '0.5'
+    value: 0.5
+    factorTypeId: DfYptaNxGjSdo8z4m
+  - _id: CphqLGRiKNYFDdZeH
+    name: '0.25'
+    value: 0.25
+    factorTypeId: p8CseLSzux9CvRhNS
+  - _id: 8vJC47d5obRXwsQKT
+    name: '0.25'
+    value: 0.25
+    factorTypeId: NGdFAQk9xLPZ54fwj
+  - _id: TTdXHpnvqMiKqSzk5
+    name: '200'
+    value: 200
+    factorTypeId: pEoshBb7McqXGWfnw
+  - _id: B3RmshyvQa6nHm8HJ
+    name: '120'
+    value: 120
+    factorTypeId: u6BmZrCa6d7nDPaA3
+  - _id: 3uo3hCMwsFJL6KxCy
+    name: '120'
+    value: 120
+    factorTypeId: pEoshBb7McqXGWfnw
+lobbyConfigs:
+  - timeoutType: lobby
+    timeoutInSeconds: 600
+    timeoutStrategy: fail
+    gameLobbyIds: []
