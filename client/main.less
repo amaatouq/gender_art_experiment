@@ -60,19 +60,40 @@
     align-content: right;
     padding: 4rem 4rem 0 4rem;
 
+    .large {
+      font-size: 2rem;
+    }
+
     .task-stimulus {
+      max-width: 65rem;
       .task-image {
-        height: 35rem;
-        padding-right: 10rem;
-        float: left;
+        max-height: 35rem;
+        max-width: 30rem;
+        padding-left: 5rem;
+        float: right;
+
+        .bp3-ui-text {
+          clear: right;
+        }
       }
 
       .task-information {
         float: left;
 
         .artist {
-          font-size: 3rem;
-          font-weight: bold;
+          h4 {
+            padding: 0;
+            margin: 0;
+            font-weight: normal;
+            // line-height: 0.5rem;
+          }
+
+          h1 {
+            font-size: 3rem;
+            line-height: 0.5rem;
+            font-weight: normal;
+          }
+          margin: 0.5rem 0 5rem;
         }
 
         .title-year {
@@ -80,21 +101,27 @@
           font-style: italic;
         }
 
+        .dimensions {
+          font-style: italic;
+        }
+
         .related-artists {
-          background-color: #ddd;
-          padding: 2rem;
-          margin-top: 2rem;
+          padding-top: 3rem;
           white-space: pre-line;
 
-          h2 {
-            padding: 0rem;
-            margin: 0rem;
+          p {
+            line-height: 0.5rem;
           }
         }
       }
 
       .task-question {
+        padding: 3rem 0 0;
         clear: both;
+      }
+
+      .task-subquestion {
+        color: #666;
       }
     }
 
@@ -102,16 +129,17 @@
       margin: 3rem 0 0;
 
       form {
-        width: 40rem;
+        max-width: 65rem;
 
         button[type="submit"] {
           margin-top: 2rem;
+          float: right;
         }
       }
 
       .text-input textarea {
-        width: 40rem;
-        height: 20rem;
+        width: 65rem;
+        height: 15rem;
       }
 
       .task-response-option {

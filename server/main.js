@@ -4,7 +4,7 @@ import "./callbacks.js";
 import "./bots.js";
 
 import { stageData } from "./constants";
-import artData from "./toy_data.json";
+import artData from "./toy_artexperiment040119.json";
 
 // gameInit is where the structure of a game is defined.
 // Just before every game starts, once all the players needed are ready, this
@@ -29,7 +29,7 @@ Empirica.gameInit(game => {
 
   for (let i = 0; i < roundCount; i++) {
     //it is better to use _.shuffle() outside the loop to shuffle things .. so we don't sample the same art work twice
-    const randomArtwork = artData[i];
+    const randomArtwork = artData[i][0];
     const femaleArtist = Math.random() < probFemale;
 
     const relatedRandom = Math.random();
@@ -44,6 +44,9 @@ Empirica.gameInit(game => {
           : randomArtwork.artistGender.male[0],
         title: randomArtwork.title,
         year: "2019",
+        width: randomArtwork.widthinches,
+        height: randomArtwork.heightinches,
+        medium: randomArtwork.medium,
         relatedArtistsGender: femaleRelated
           ? "female"
           : maleRelated
@@ -67,7 +70,8 @@ Empirica.gameInit(game => {
         durationInSeconds: game.treatment.stageLength || 120,
         data: {
           type: "solo",
-          questionText: stage.questionText
+          questionText: stage.questionText,
+          subQuestionText: stage.subQuestionText
         }
       });
 
@@ -78,7 +82,8 @@ Empirica.gameInit(game => {
           durationInSeconds: game.treatment.socialStageLength || 120,
           data: {
             type: "social",
-            questionText: stage.questionText
+            questionText: stage.questionText,
+            subQuestionText: stage.subQuestionText
           }
         });
       }

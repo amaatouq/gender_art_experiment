@@ -68,7 +68,6 @@ export default class TaskResponseValue extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <RadioGroup
             inline={false}
-            label={stage.get("questionText")}
             name="checkedOption"
             onChange={this.handleChange}
             selectedValue={checkedOption}
