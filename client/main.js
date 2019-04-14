@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import Empirica from "meteor/empirica:core";
 
 import Round from "./game/Round";
+import Breadcrumb from "./game/Breadcrumb";
 import Consent from "./intro/Consent";
 import InstructionStepOne from "./intro/InstructionStepOne";
 import InstructionStepTwo from "./intro/InstructionStepTwo";
@@ -10,6 +11,8 @@ import Quiz from "./intro/Quiz";
 import ExitSurvey from "./exit/ExitSurvey";
 import Thanks from "./exit/Thanks";
 import Sorry from "./exit/Sorry";
+
+Empirica.breadcrumb(Breadcrumb);
 
 // Set the Consent Component you want to present players (optional).
 Empirica.consent(Consent);
