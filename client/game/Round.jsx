@@ -1,9 +1,5 @@
 import React from "react";
 
-import {
-  ProgressBar
-} from "@blueprintjs/core";
-
 import PlayerProfile from "./PlayerProfile.jsx";
 import SocialInteractions from "./SocialInteractions.jsx";
 import Task from "./Task.jsx";
@@ -26,10 +22,7 @@ export default class Round extends React.Component {
             />
           ) : null}
         </div>
-        <ProgressBar className="progress-bar"
-          stripes={false} animate={false}
-          intent={"primary"} value={round.index / game.rounds.length} 
-        />
+
       </div>
     );
   }
