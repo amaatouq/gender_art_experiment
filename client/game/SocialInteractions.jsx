@@ -2,6 +2,7 @@ import React from "react";
 import ChatLog from "./ChatLog";
 import TaskResponseText from "./TaskResponseText";
 import TaskResponseOptions from "./TaskResponseOptions";
+import TaskResponseValue from "./TaskResponseOptions";
 import TaskResponseSlider from "./TaskResponseSlider";
 
 export default class SocialInteractions extends React.Component {
@@ -70,6 +71,8 @@ export default class SocialInteractions extends React.Component {
               <TaskResponseText {...otherPlayerProps} />
             ) : stage.name === "qualities-social" ? (
               <TaskResponseOptions {...otherPlayerProps} />
+            ) : stage.name === "value-social" ? (
+              <TaskResponseValue {...otherPlayerProps} />
             ) : (
               <TaskResponseSlider {...otherPlayerProps} />
             )}

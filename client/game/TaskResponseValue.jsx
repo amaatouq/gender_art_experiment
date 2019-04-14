@@ -42,7 +42,7 @@ export default class TaskResponseValue extends React.Component {
     console.log(checkedOption);
     console.log(this.state);
 
-    const value = player.round.get(stage.name);
+    var value = player.round.get(stage.name);
 
     if (this.state.prepopulate && stage.get("type") === "social") {
       value = this.getPreviousRoundResponse(player);
