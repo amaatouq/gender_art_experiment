@@ -44,7 +44,7 @@ Empirica.round(Round);
 // exit screen will be shown.
 Empirica.exitSteps((game, player) => {
   if (player.exitStatus !== "finished") {
-    return [Sorry];
+    return [Sorry, Thanks];
   }
   return [ExitSurvey, Thanks];
 });

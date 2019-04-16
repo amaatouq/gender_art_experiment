@@ -51,7 +51,9 @@ Empirica.gameInit(game => {
             ? randomArtwork.relatedArtists.male
             : randomArtwork.relatedArtists.mix,
         relevantQualities: randomArtwork.relevantQualties,
-        valueOptions: experts ? stageData.value.expertOptions : stageData.value.layOptions,
+        valueOptions: experts
+          ? stageData.value.expertOptions
+          : stageData.value.layOptions,
         imagePath: randomArtwork.imagepath
       }
     });

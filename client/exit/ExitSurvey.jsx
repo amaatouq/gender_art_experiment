@@ -47,14 +47,7 @@ export default class ExitSurvey extends React.Component {
 
   render() {
     const { player } = this.props;
-    const {
-      visits,
-      fair,
-      original,
-      home,
-      creative,
-      jobTitle
-    } = this.state;
+    const { visits, fair, original, home, creative, jobTitle } = this.state;
 
     return (
       <Centered>
@@ -200,7 +193,10 @@ export default class ExitSurvey extends React.Component {
 
             <div className="form-line">
               <div>
-                <label htmlFor="jobTitle">If yes, please provide your job title (e.g. museum curator, artist, etc)</label>
+                <label htmlFor="jobTitle">
+                  If yes, please provide your job title (e.g. museum curator,
+                  artist, etc)
+                </label>
                 <div>
                   <input
                     id="jobTitle"

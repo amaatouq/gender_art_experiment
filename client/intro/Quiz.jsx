@@ -29,7 +29,9 @@ export default class Quiz extends React.Component {
           <h1> Quiz </h1>
           <form onSubmit={this.handleSubmit}>
             <p>
-              <label htmlFor="living">Are the artworks you will see by living artists?</label>
+              <label htmlFor="living">
+                Are the artworks you will see by living artists?
+              </label>
               <input
                 type="text"
                 dir="auto"
@@ -44,7 +46,8 @@ export default class Quiz extends React.Component {
             </p>
             <p>
               <label htmlFor="outside">
-                Should you reference outside materials in completing this survey?
+                Should you reference outside materials in completing this
+                survey?
               </label>
               <input
                 type="text"

@@ -1,8 +1,10 @@
 export const stageData = {
   description: {
     title: "Describe",
-    questionText: "How would you describe this work to someone who is unable to see it?",
-    subQuestionText: "Your description may include mention of the medium (painting, sculpture, textile, etc), the material (metal, cotton, etc), the style (abstract, impressionist, etc), the themes (science, pop culture, etc), the content (a ball, a landscape, a family, etc), or any other information as you see appropriate:"
+    questionText:
+      "How would you describe this work to someone who is unable to see it?",
+    subQuestionText:
+      "Your description may include mention of the medium (painting, sculpture, textile, etc), the material (metal, cotton, etc), the style (abstract, impressionist, etc), the themes (science, pop culture, etc), the content (a ball, a landscape, a family, etc), or any other information as you see appropriate:"
   },
   qualities: {
     title: "Choose Qualities",
