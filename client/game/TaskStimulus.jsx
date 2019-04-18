@@ -47,7 +47,7 @@ export default class TaskStimulus extends React.Component {
         <div className="task-question bp3-ui-text large">
           <p>{questionText === undefined ? "" : questionText}</p>
         </div>
-        <div className="task-subquestion bp3-ui-text large">
+        <div className="task-subquestion bp3-ui-text">
           <p>{subQuestionText ? subQuestionText : ""}</p>
         </div>
       </div>

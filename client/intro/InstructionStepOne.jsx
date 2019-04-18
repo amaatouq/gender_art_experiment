@@ -11,12 +11,12 @@ export default class InstructionStepOne extends React.Component {
         <div className="instructions">
           <h1>Instructions </h1>
           <p className="bp3-ui-text">
-            You will now be asked to describe and value 10 artworks by living artists.
+            You will now be asked to describe, value, and state your preference for 10 artworks by living artists.
           </p>
           <p className="bp3-ui-text">
             Before you answer, <u>please look at each artwork in detail, and
             consider the accompanying information</u> (e.g. size, medium, etc).
-            <u>Do not use outside resources</u> in your descriptions or judgments.
+             <u>Do not use outside resources</u> in your descriptions or judgments.
             Instead, rely solely on your personal impressions.
           </p>
           <p className="bp3-ui-text">

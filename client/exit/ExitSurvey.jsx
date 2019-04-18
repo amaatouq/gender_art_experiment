@@ -200,7 +200,7 @@ export default class ExitSurvey extends React.Component {
 
             <div className="form-line">
               <div>
-                <label htmlFor="jobTitle">If yes, please provide your job title (e.g. museum curator, artist, etc)</label>
+                <label className="bp3-label" htmlFor="jobTitle">If yes, please provide your job title (e.g. museum curator, artist, etc.)</label>
                 <div>
                   <input
                     id="jobTitle"

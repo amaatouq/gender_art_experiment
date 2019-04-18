@@ -4,15 +4,10 @@ export const stageData = {
     questionText: "How would you describe this work to someone who is unable to see it?",
     subQuestionText: "Your description may include mention of the medium (painting, sculpture, textile, etc), the material (metal, cotton, etc), the style (abstract, impressionist, etc), the themes (science, pop culture, etc), the content (a ball, a landscape, a family, etc), or any other information as you see appropriate:"
   },
-  qualities: {
-    title: "Choose Qualities",
-    questionText:
-      "Please select the 3 most relevant qualities to describe this artwork:"
-  },
   value: {
     title: "Choose Artwork Value",
     questionText:
-      "On average, artwork created in the past five years has been priced at $. What price would you assign to this artwork, if it were being sold at a gallery in a major city?",
+      "An artwork of this style was priced, on average, at $ in 2018. If it were sold by a gallery in New York City, would you price this work:",
     expertOptions: [
       {
         id: "tier1",
@@ -50,7 +45,7 @@ export const stageData = {
     layOptions: [
       {
         id: "below",
-        name: "Below Average"
+        name: "Below average"
       },
       {
         id: "average",
@@ -61,6 +56,11 @@ export const stageData = {
         name: "Above average"
       }
     ]
+  },
+  qualities: {
+    title: "Choose Qualities",
+    questionText:
+      "Please indicate how relevant the following qualities are at describing the artwork, from 0 (not relevant) to 100 (very relevant):"
   },
   preference: {
     title: "Choose Your Preference",
