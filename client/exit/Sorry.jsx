@@ -45,15 +45,11 @@ export default class Sorry extends React.Component {
           {/*</p>*/}
 
           {player.exitStatus === "gameLobbyTimedOut" ? (
-            <p>
-              The game availability timed out.
-            </p>
+            <p>The game availability timed out.</p>
           ) : null}
 
           {player.exitStatus === "gameFull" ? (
-            <p>
-              The number of player positions is full.
-            </p>
+            <p>The number of player positions is full.</p>
           ) : null}
 
           {/*) : (*/}
@@ -75,15 +71,15 @@ export default class Sorry extends React.Component {
           {/*This is not really needed .. all of these people failed to start the game .. if we allow them to submit, then their data will be deleted, we don't want that*/}
           <p>
             {/*{hasNext ? (*/}
-              {/*<Button*/}
-                {/*intent={"primary"}*/}
-                {/*type="button"*/}
-                {/*onClick={() => onSubmit()}*/}
-              {/*>*/}
-                {/*Done*/}
-              {/*</Button>*/}
+            {/*<Button*/}
+            {/*intent={"primary"}*/}
+            {/*type="button"*/}
+            {/*onClick={() => onSubmit()}*/}
+            {/*>*/}
+            {/*Done*/}
+            {/*</Button>*/}
             {/*) : (*/}
-              {/*""*/}
+            {/*""*/}
             {/*)}*/}
           </p>
         </div>

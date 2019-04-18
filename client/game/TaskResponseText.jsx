@@ -1,5 +1,11 @@
 import React from "react";
-import { TextArea, Intent, Checkbox, Toaster, Position } from "@blueprintjs/core";
+import {
+  TextArea,
+  Intent,
+  Checkbox,
+  Toaster,
+  Position
+} from "@blueprintjs/core";
 
 const WarningToaster = Toaster.create({
   className: "warning-toaster",

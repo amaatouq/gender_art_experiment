@@ -126,7 +126,7 @@
       }
 
       .task-subquestion {
-        color: #AAA;
+        color: #aaa;
       }
     }
 
@@ -288,4 +288,23 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.timer {
+  .seconds {
+    color: green;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+
+  &.lessThan10 {
+    .seconds {
+      color: orange;
+    }
+  }
+  &.lessThan5 {
+    .seconds {
+      color: red;
+    }
+  }
 }
