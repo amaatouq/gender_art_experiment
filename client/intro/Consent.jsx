@@ -32,9 +32,8 @@ export default class Consent extends React.Component {
           </p>
 
           <p className="bp3-ui-text">
-            You will be given 5 minutes to complete each task. You can change
-            your mind at any time and stop completing the survey without
-            consequences. If you agree to be part of the research and to
+            You can change your mind at any time and stop completing the survey
+            without consequences. If you agree to be part of the research and to
             research data gathered from this survey being used in academic
             publication in a form that does not identify you, please continue
             with answering the survey questions. If you have concerns about the

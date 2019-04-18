@@ -1,7 +1,7 @@
 import React from "react";
 
 import TaskResponseText from "./TaskResponseText";
-import TaskResponseOptions from "./TaskResponseOptions";
+import TaskResponseScales from "./TaskResponseScales";
 import TaskResponseValue from "./TaskResponseValue";
 import TaskResponseSlider from "./TaskResponseSlider";
 
@@ -30,7 +30,7 @@ export default class TaskResponse extends React.Component {
       stage.name === "qualities" ||
       stage.name === "qualities-social"
     ) {
-      return <TaskResponseOptions {...this.props} />;
+      return <TaskResponseScales {...this.props} />;
     } else if (stage.name === "value" || stage.name === "value-social") {
       return <TaskResponseValue {...this.props} />;
     } else if (

@@ -1,8 +1,8 @@
 import React from "react";
 import ChatLog from "./ChatLog";
 import TaskResponseText from "./TaskResponseText";
-import TaskResponseOptions from "./TaskResponseOptions";
-import TaskResponseValue from "./TaskResponseOptions";
+import TaskResponseScales from "./TaskResponseScales";
+import TaskResponseValue from "./TaskResponseValue";
 import TaskResponseSlider from "./TaskResponseSlider";
 
 export default class SocialInteractions extends React.Component {
@@ -35,13 +35,6 @@ export default class SocialInteractions extends React.Component {
     );
   }
 
-  getPreviousRoundResponse(player) {
-    const { round, stage } = this.props;
-    const prevIndex = stage.index - 1;
-    const prevStage = round.stages[prevIndex].name;
-    return player.round.get(prevStage);
-  }
-
   render() {
     const { game, stage, player, round } = this.props;
 
@@ -50,9 +43,6 @@ export default class SocialInteractions extends React.Component {
       text,
       subject: game.players.find(p => p._id === playerId)
     }));
-
-    const playerResponse = this.getPreviousRoundResponse(player);
-    const otherPlayerResponse = this.getPreviousRoundResponse(otherPlayers[0]);
 
     const otherPlayerProps = {
       player: otherPlayers[0],
@@ -70,7 +60,7 @@ export default class SocialInteractions extends React.Component {
             {stage.name === "description-social" ? (
               <TaskResponseText {...otherPlayerProps} />
             ) : stage.name === "qualities-social" ? (
-              <TaskResponseOptions {...otherPlayerProps} />
+              <TaskResponseScales {...otherPlayerProps} />
             ) : stage.name === "value-social" ? (
               <TaskResponseValue {...otherPlayerProps} />
             ) : (

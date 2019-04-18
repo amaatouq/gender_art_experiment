@@ -7,12 +7,12 @@ const WarningToaster = Toaster.create({
 });
 
 export default class TaskResponseValue extends React.Component {
-  state = { checkedOption: "", prepopulate: true };
+  state = { prepopulate: true };
 
   handleSubmit = event => {
     event.preventDefault();
-    const value = this.state.checkedOption;
     const { player, stage } = this.props;
+    const value = player.round.get(stage.name);
     player.round.set(stage.name, value);
 
     if (!value) {
@@ -25,27 +25,26 @@ export default class TaskResponseValue extends React.Component {
   };
 
   handleChange = event => {
+    const { player, stage } = this.props;
     const el = event.currentTarget;
-    this.setState({ [el.name]: el.value });
+    player.round.set(stage.name, el.value);
   };
 
-  getPreviousRoundResponse(player) {
+  getPreviousStageResponse(player) {
     const { round, stage } = this.props;
-    const prevIndex = stage.index - 1;
+    const stagesPerRound = round.stages.length;
+    const prevIndex = (stage.index - 1)%stagesPerRound;
     const prevStage = round.stages[prevIndex].name;
     return player.round.get(prevStage);
   }
 
   render() {
     const { player, round, stage, readonly } = this.props;
-    const { checkedOption } = this.state;
-    console.log(checkedOption);
-    console.log(this.state);
 
     var value = player.round.get(stage.name);
 
     if (this.state.prepopulate && stage.get("type") === "social") {
-      value = this.getPreviousRoundResponse(player);
+      value = this.getPreviousStageResponse(player);
       player.round.set(stage.name, value);
       this.state.prepopulate = false;
     }
@@ -54,7 +53,6 @@ export default class TaskResponseValue extends React.Component {
     _.each(round.get("valueOptions"), option => {
       options.push(
         <Radio
-          selected={checkedOption}
           name="checkedOption"
           value={option.id}
           label={option.name}
@@ -70,7 +68,8 @@ export default class TaskResponseValue extends React.Component {
             inline={false}
             name="checkedOption"
             onChange={this.handleChange}
-            selectedValue={checkedOption}
+            selectedValue={player.round.get(stage.name)}
+            disabled={readonly}
           >
             {options}
           </RadioGroup>

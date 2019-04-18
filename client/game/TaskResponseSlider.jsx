@@ -17,9 +17,10 @@ export default class TaskResponse extends React.Component {
     this.props.player.stage.submit();
   };
 
-  getPreviousRoundResponse(player) {
+  getPreviousStageResponse(player) {
     const { round, stage } = this.props;
-    const prevIndex = stage.index - 1;
+    const stagesPerRound = round.stages.length;
+    const prevIndex = (stage.index - 1)%stagesPerRound;
     const prevStage = round.stages[prevIndex].name;
     return player.round.get(prevStage);
   }
@@ -29,7 +30,7 @@ export default class TaskResponse extends React.Component {
     var value = player.round.get(stage.name);
 
     if (this.state.prepopulate && stage.get("type") === "social") {
-      value = this.getPreviousRoundResponse(player);
+      value = this.getPreviousStageResponse(player);
       player.round.set(stage.name, value);
       this.state.prepopulate = false;
     }
