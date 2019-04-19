@@ -19,13 +19,13 @@ export default class TaskStimulus extends React.Component {
       <div className="task-stimulus">
         <div className="task-information">
           <div className="artist">
-            <h4 className="bp3-heading">Artist:</h4>
+            <h4 className="bp3-heading" style={{ color: '#F1AF1B' }}>ARTIST</h4>
             <h1 className="bp3-heading">{round.get("artistName")}</h1>
           </div>
 
           <div className="related-artists bp3-ui-text large">
-            <p>Similar Artists:</p>
-            <ul>{similarArtists}</ul>
+            <p style={{ color: '#F1AF1B' }}><font size="3">SIMILAR ARTISTS</font></p>
+            <ul><font size="3">{similarArtists}</font></ul>
           </div>
         </div>
 
@@ -36,10 +36,10 @@ export default class TaskStimulus extends React.Component {
             <img src={"./data/" + imagePath} height={"300px"} />
           )}
 
-          <div className="title-year bp3-ui-text">
-            {`'${round.get("title")}' (${round.get("year")})`}
+          <div className="title-year bp3-ui-text" style={{ color: '#666' }}><i>
+            {`'${round.get("title")}' (${round.get("year")})`}</i>
           </div>
-          <div className="dimensions bp3-ui-text">
+          <div className="dimensions bp3-ui-text" style={{ color: '#666' }}>
             {`${round.get("width")}in X ${round.get("height")}in, ${round.get(
               "medium"
             )}`}

@@ -12,15 +12,15 @@ export default class InstructionStepOne extends React.Component {
           <h1>Instructions </h1>
           <p className="bp3-ui-text">
             You will now be asked to describe, value, and state your preference
-            for 10 artworks by living artists.
+            for 5 artworks by living artists.
           </p>
           <p className="bp3-ui-text">
-            Before you answer,{" "}
-            <u>
-              please look at each artwork in detail, and consider the
+            Before you answer, please{" "}
+            <u>look at each artwork in detail,</u>{" "}
+            and{" "}<u>consider the
               accompanying information
             </u>{" "}
-            (e.g. size, medium, etc).
+            (e.g. size, medium, etc).{" "}
             <u>Do not use outside resources</u> in your descriptions or
             judgments. Instead, rely solely on your personal impressions.
           </p>

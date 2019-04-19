@@ -27,7 +27,7 @@ export default class Consent extends React.Component {
             the questions purely based on your first impression.
           </p>
 
-          <p className="bp3-ui-text purple" style={{ color: 'purple' }}>
+          <p className="bp3-ui-text purple" style={{ color: '#6E1EFF' }}>
             You will be given 5 minutes to complete each task.
           </p>
 
@@ -44,7 +44,7 @@ export default class Consent extends React.Component {
             number] or at [email address].
           </p>
           <br />
-          <ConsentButton text="I AGREE" />
+          <ConsentButton text="I AGREE"/>
         </div>
       </Centered>
     );
