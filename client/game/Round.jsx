@@ -13,11 +13,10 @@ export default class Round extends React.Component {
     return (
       <div className="round">
         <div className="progress-bar">
-          Progress Bar:{" "}
           <ProgressBar
             stripes={false}
             animate={false}
-            intent={"primary"}
+            intent={"none"}
             value={(round.index + 1) / game.rounds.length}
           />
         </div>

@@ -1,3 +1,7 @@
+body, bp3-ui-text {
+  font-family: Arial, sans-serif !important;
+}
+
 .round {
   display: flex;
   flex-direction: column;
@@ -6,6 +10,10 @@
   .progress-bar {
     width: 50rem;
     margin: 0 auto;
+
+    .bp3-progress-meter {
+      background-color: #666;
+    }
   }
 
   .content {
@@ -139,12 +147,26 @@
         button[type="submit"] {
           margin-top: 2rem;
           float: right;
+          background-color: #F7625A;
         }
       }
 
       .text-input textarea {
         width: 65rem;
         height: 15rem;
+        border: 1px solid #F1AF1B;
+      }
+
+      input:focus {
+        outline: none !important;
+        border: 1px solid #F1AF1B;
+        box-shadow: 0 0 10px #F1AF1B;
+      }
+
+      textarea:focus {
+        outline: none !important;
+        border: 1px solid #F1AF1B;
+        box-shadow: 0 0 10px #F1AF1B;
       }
 
       .quality-scale {
@@ -240,6 +262,10 @@ button {
     padding: 0.3rem 0.5rem;
     border-radius: 0.3rem;
     border: 1px solid lightgray;
+  }
+
+  textarea:focus {
+    outline: 1px solid #F1AF1B;
   }
 }
 

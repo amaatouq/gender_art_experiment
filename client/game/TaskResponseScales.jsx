@@ -88,7 +88,7 @@ export default class TaskResponse extends React.Component {
           {readonly ? (
             ""
           ) : (
-            <button className="bp3-button bp3-intent-primary" type="submit">
+            <button className="bp3-button" type="submit">
               Next
             </button>
           )}

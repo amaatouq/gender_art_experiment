@@ -38,7 +38,7 @@ export default class InstructionStepOne extends React.Component {
           </button>
           <button
             type="button"
-            className="bp3-button bp3-intent-primary"
+            className="bp3-button"
             onClick={onNext}
             disabled={!hasNext}
           >

@@ -40,7 +40,7 @@ export default class ChatLog extends React.Component {
               onChange={this.handleChange}
               autoComplete="off"
             />
-            <button type="submit" className="bp3-button bp3-intent-primary">
+            <button type="submit" className="bp3-button">
               Send
             </button>
           </div>

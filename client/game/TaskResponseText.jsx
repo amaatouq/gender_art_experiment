@@ -68,7 +68,6 @@ export default class TaskResponseText extends React.Component {
               className={readonly ? "" : "readonly"}
               large={true}
               readOnly={readonly}
-              intent={readonly ? "" : Intent.PRIMARY}
               onChange={this.handleChangeText}
               value={value}
             />
@@ -77,7 +76,7 @@ export default class TaskResponseText extends React.Component {
           {readonly ? (
             ""
           ) : (
-            <button className="bp3-button bp3-intent-primary" type="submit">
+            <button className="bp3-button" type="submit">
               Next
             </button>
           )}
