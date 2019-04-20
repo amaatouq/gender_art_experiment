@@ -51,14 +51,26 @@ export default class TaskResponse extends React.Component {
     }
 
     return (
-      <div className="task-response">
+      <div className="task-response task-response-preference">
         <form onSubmit={this.handleSubmit}>
           <Slider
             min={0}
-            max={100}
-            stepSize={0.01}
-            labelStepSize={25}
-            labelPrecision={0}
+            max={2}
+            stepSize={1}
+            labelStepSize={1}
+            labelRenderer={
+              function(number) {
+                if (number === 0) {
+                  return "I do not like this at all";
+                } else if (number === 1) {
+                  return "This is fine";
+                } else if (number === 2) {
+                  return "I like this a lot";
+                } else {
+                  return "";
+                }
+              }
+            }
             onChange={this.handleChangeSlider}
             value={value}
             disabled={readonly}
