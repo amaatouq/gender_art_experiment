@@ -40,6 +40,7 @@ Empirica.gameInit(game => {
         width: randomArtwork.widthinches,
         height: randomArtwork.heightinches,
         medium: randomArtwork.medium,
+        aveprice: randomArtwork.aveprice,
         relatedArtistsGender: femaleRelated
           ? "female"
           : maleRelated

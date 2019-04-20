@@ -12,8 +12,14 @@ export default class TaskStimulus extends React.Component {
       ? round.get("imagePath")
       : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/600px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg";
     console.log(imagePath);
-    const questionText = stage.get("questionText");
+    var questionText = stage.get("questionText");
     const subQuestionText = stage.get("subQuestionText");
+
+    if ((stage.name === "value" || stage.name === "value-social") && round.get("aveprice")) {
+      questionText = "An artwork of this style and size was priced, on average, at $";
+      questionText += round.get("aveprice");
+      questionText += " in 2018. Would you price this work:";
+    }
 
     return (
       <div className="task-stimulus">
