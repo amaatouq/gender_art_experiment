@@ -1,4 +1,15 @@
 treatments:
+  - name: expert solo
+    factorIds:
+      - meN9ofzfswDcARPqa
+      - HSaviQYhtHQbuuowD
+      - xZiisde3KGRydLRBo
+      - CphqLGRiKNYFDdZeH
+      - 8vJC47d5obRXwsQKT
+      - TTdXHpnvqMiKqSzk5
+      - B3RmshyvQa6nHm8HJ
+      - KT74WY53uiGmqC9FS
+      - tMYiMb4Q2aNEA82Bb
   - name: solo
     factorIds:
       - meN9ofzfswDcARPqa
@@ -8,6 +19,8 @@ treatments:
       - 8vJC47d5obRXwsQKT
       - 3uo3hCMwsFJL6KxCy
       - B3RmshyvQa6nHm8HJ
+      - KT74WY53uiGmqC9FS
+      - C5AyHpXgzgkuwiYMb
   - name: pair
     factorIds:
       - 5k8SoyZxMyuJSQvbp
@@ -17,8 +30,10 @@ treatments:
       - 8vJC47d5obRXwsQKT
       - 3uo3hCMwsFJL6KxCy
       - B3RmshyvQa6nHm8HJ
+      - KT74WY53uiGmqC9FS
+      - C5AyHpXgzgkuwiYMb
 factorTypes:
-  - _id: p2XsPeiwemNGwwbR3
+  - _id: fAhTktginz6g53hkT
     name: playerCount
     description: The Number of players participating in the given game.
     required: true
@@ -66,19 +81,31 @@ factorTypes:
     type: Number
     min: 0
     max: 12000000
+  - _id: dRbmP5oLLkSKz3fPL
+    name: probabilityMaleArtist
+    description: The probability that the artist name displayed is male.
+    required: false
+    type: Number
+    min: 0
+    max: 1
+  - _id: BrrL2ArcZj3iaCJzY
+    name: experts
+    description: Indicate whether the participants are experts.
+    required: false
+    type: Boolean
 factors:
   - _id: meN9ofzfswDcARPqa
     name: solo
     value: 1
-    factorTypeId: p2XsPeiwemNGwwbR3
+    factorTypeId: fAhTktginz6g53hkT
   - _id: 5k8SoyZxMyuJSQvbp
     name: dyad
     value: 2
-    factorTypeId: p2XsPeiwemNGwwbR3
+    factorTypeId: fAhTktginz6g53hkT
   - _id: ER3JHkPCJZXrrjxbH
     name: group
     value: 3
-    factorTypeId: p2XsPeiwemNGwwbR3
+    factorTypeId: fAhTktginz6g53hkT
   - _id: HSaviQYhtHQbuuowD
     name: short
     value: 3
@@ -111,6 +138,18 @@ factors:
     name: '120'
     value: 120
     factorTypeId: pEoshBb7McqXGWfnw
+  - _id: KT74WY53uiGmqC9FS
+    name: '0.5'
+    value: 0.5
+    factorTypeId: dRbmP5oLLkSKz3fPL
+  - _id: tMYiMb4Q2aNEA82Bb
+    name: 'true'
+    value: true
+    factorTypeId: BrrL2ArcZj3iaCJzY
+  - _id: C5AyHpXgzgkuwiYMb
+    name: 'false'
+    value: false
+    factorTypeId: BrrL2ArcZj3iaCJzY
 lobbyConfigs:
   - timeoutType: lobby
     timeoutInSeconds: 600
