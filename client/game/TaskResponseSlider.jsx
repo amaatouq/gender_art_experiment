@@ -1,6 +1,13 @@
 import React from "react";
 import Slider from "meteor/empirica:slider";
 
+import { Toaster, Position } from "@blueprintjs/core";
+
+const WarningToaster = Toaster.create({
+  className: "warning-toaster",
+  position: Position.TOP
+});
+
 export default class TaskResponse extends React.Component {
   state = { prepopulate: true };
 
@@ -14,7 +21,15 @@ export default class TaskResponse extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.player.stage.submit();
+    const { player, stage } = this.props;
+
+    if (!player.round.get(stage.name)) {
+      WarningToaster.show({
+        message: "Please enter a response."
+      });
+    } else {
+      this.props.player.stage.submit();
+    }
   };
 
   getPreviousStageResponse(player) {

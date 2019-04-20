@@ -40,9 +40,10 @@ export default class TaskStimulus extends React.Component {
             {`'${round.get("title")}' (${round.get("year")})`}</i>
           </div>
           <div className="dimensions bp3-ui-text" style={{ color: '#666' }}>
-            {`${round.get("width")}in X ${round.get("height")}in, ${round.get(
-              "medium"
-            )}`}
+            {`${round.get("width")}in X ${round.get("height")}in`}
+          </div>
+          <div className="medium bp3-ui-text" style={{ color: '#666' }}>
+            {round.get("medium")}
           </div>
         </div>
 

@@ -2,14 +2,14 @@ export const stageData = {
   description: {
     title: "Describe",
     questionText:
-      "How would you describe this work to someone who is unable to see it?",
+      "How would you describe this work to someone who is unable to see it? Please provide several sentences.",
     subQuestionText:
       "Your description may include mention of the medium (painting, sculpture, textile, etc), the material (metal, cotton, etc), the style (abstract, impressionist, etc), the themes (science, pop culture, etc), the content (a ball, a landscape, a family, etc), or any other information as you see appropriate:"
   },
   value: {
     title: "Choose Artwork Value",
     questionText:
-      "An artwork of this style was priced, on average, at $ in 2018. If it were sold by a gallery in New York City, would you price this work:",
+      "An artwork of this style and size was priced, on average, at $ in 2018. Would you price this work:",
     expertOptions: [
       {
         id: "tier1",
@@ -62,7 +62,7 @@ export const stageData = {
   qualities: {
     title: "Choose Qualities",
     questionText:
-      "Please indicate how relevant the following qualities are at describing the artwork, from 0 (not relevant) to 100 (very relevant):"
+      "Please indicate how relevant the following qualities are at describing the artwork, with 0 indicating no relevance and 100 indicating very high relevance:"
   },
   preference: {
     title: "Choose Your Preference",
