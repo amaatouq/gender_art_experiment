@@ -4,7 +4,7 @@ import "./callbacks.js";
 import "./bots.js";
 
 import { stageData } from "./constants";
-import artData from "./toy_artexperiment040119.json";
+import artData from "./toy_artexperiment041919_new.json";
 
 Empirica.gameInit(game => {
   game.players.forEach((player, i) => {
@@ -22,7 +22,7 @@ Empirica.gameInit(game => {
 
   for (let i = 0; i < roundCount; i++) {
     //it is better to use _.shuffle() outside the loop to shuffle things .. so we don't sample the same art work twice
-    const randomArtwork = artData[i][0];
+    const randomArtwork = artData[i];
     const femaleArtist = Math.random() < probFemale;
 
     const relatedRandom = Math.random();
