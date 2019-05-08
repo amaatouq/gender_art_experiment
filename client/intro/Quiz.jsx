@@ -3,7 +3,7 @@ import React from "react";
 import { Centered } from "meteor/empirica:core";
 
 export default class Quiz extends React.Component {
-  state = { living: "", outside: "" };
+  state = { living: "", artcount: "" };
 
   handleChange = event => {
     const el = event.currentTarget;
@@ -13,7 +13,7 @@ export default class Quiz extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    if (this.state.living !== "yes" || this.state.outside !== "no") {
+    if (this.state.living !== "yes" || this.state.artcount !== "5") {
       alert("Incorrect! Read the instructions, and please try again.");
     } else {
       this.props.onNext();
@@ -22,7 +22,7 @@ export default class Quiz extends React.Component {
 
   render() {
     const { hasPrev, hasNext, onNext, onPrev } = this.props;
-    const { living, outside } = this.state;
+    const { living, artcount } = this.state;
     return (
       <Centered>
         <div className="quiz">
@@ -45,17 +45,16 @@ export default class Quiz extends React.Component {
               />
             </p>
             <p>
-              <label htmlFor="outside">
-                Should you reference outside materials in completing this
-                survey?
+              <label htmlFor="artcount">
+                How many artworks will you be evaluating?
               </label>
               <input
                 type="text"
                 dir="auto"
-                id="outside"
-                name="outside"
-                placeholder="yes / no"
-                value={outside}
+                id="artcount"
+                name="artcount"
+                placeholder=""
+                value={artcount}
                 onChange={this.handleChange}
                 autoComplete="off"
                 required

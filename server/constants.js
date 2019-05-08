@@ -46,16 +46,16 @@ export const stageData = {
     ],
     layOptions: [
       {
-        id: "below",
-        name: "Below average"
+        id: "above",
+        name: "Above average"
       },
       {
         id: "average",
         name: "Average"
       },
       {
-        id: "above",
-        name: "Above average"
+        id: "below",
+        name: "Below average"
       }
     ]
   },

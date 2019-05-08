@@ -10,41 +10,29 @@ export default class Consent extends React.Component {
         <div className="consent">
           <H1> Consent Form </H1>
           <p className="bp3-ui-text">
-            My name is Taylor Brown and I am an academic at Duke University. The
-            purpose of this survey is to describe artworks for those who cannot
-            see them.
+            The purpose of this survey is to describe visual artworks for those
+            who cannot see them. These are artworks are by living artists,
+            though you are not expected to be familiar with the artists or their work.
           </p>
 
           <p className="bp3-ui-text">
-            You will be shown a series of 10 artworks. For each, you will be
-            asked to (1) describe the work, (2) estimate its value, and (3)
-            indicate your personal preference for it.
+            You can change your mind at any time and stop completing the survey without
+            consequences. My name is Taylor Brown and I am a researcher at Duke University.
+            If you have concerns about the research that you think I can help you with,
+            please feel free to contact me on [phone number] or at [email address].
+            If you would like to talk to someone who is not connected with the research,
+            you may contact the Duke University Research Ethics Officer at [phone number]
+            or at [email address].
           </p>
 
           <p className="bp3-ui-text">
-            These are not famous artworks, so you will probably be seeing them
-            for the first time. You may, however, recognize artist names. Answer
-            the questions purely based on your first impression.
-          </p>
-
-          <p className="bp3-ui-text purple" style={{ color: '#6E1EFF' }}>
-            You will be given 5 minutes to complete each task.
-          </p>
-
-          <p className="bp3-ui-text">
-            You can change your mind at any time and stop completing the survey
-            without consequences. If you agree to be part of the research and to
-            research data gathered from this survey being used in academic
-            publication in a form that does not identify you, please continue
-            with answering the survey questions. If you have concerns about the
-            research that you think I can help you with, please feel free to
-            contact me on [phone number] or at [email address]. If you would
-            like to talk to someone who is not connected with the research, you
-            may contact the Duke University Research Ethics Officer at [phone
-            number] or at [email address].
+            If you agree to be part of the research and to research data
+            gathered from this survey being used in academic publication in a form
+            that does not identify you, please continue with answering the survey
+            questions.
           </p>
           <br />
-          <ConsentButton text="I AGREE"/>
+          <ConsentButton color="OEDA83" text="I AGREE"/ >
         </div>
       </Centered>
     );

@@ -21,11 +21,9 @@ export default class InstructionStepOne extends React.Component {
               accompanying information
             </u>{" "}
             (e.g. size, medium, etc).{" "}
-            <u>Do not use outside resources</u> in your descriptions or
-            judgments. Instead, rely solely on your personal impressions.
           </p>
           <p className="bp3-ui-text">
-            You will be given 5 minutes to complete each task.
+            Please rely solely on your personal impressions.
           </p>
 
           <button
