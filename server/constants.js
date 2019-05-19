@@ -6,6 +6,52 @@ export const stageData = {
     subQuestionText:
       "Your description may include mention of the medium (painting, sculpture, textile, etc), the material (metal, cotton, etc), the style (abstract, impressionist, etc), the themes (science, pop culture, etc), the content (a ball, a landscape, a family, etc), or any other information as you see appropriate:"
   },
+  qualities: {
+    title: "Choose Qualities",
+    questionText:
+      "Please indicate how relevant the following qualities are at describing the artwork, with 0 indicating no relevance and 100 indicating very high relevance:",
+      options: [
+        {
+          id: "notrelevant",
+          name: "Not relevant at all"
+        },
+        {
+          id: "relevant",
+          name: "Relevant"
+        },
+        {
+          id: "highlyrelevant",
+          name: "Highly relevant"
+        }
+      ]
+  },
+  preference: {
+    title: "Choose Your Preference",
+    questionText:
+      "What is your preference for this artwork?",
+    options: [
+      {
+        id: "5",
+        name: "I like this a lot"
+      },
+      {
+        id: "4",
+        name: "I like this"
+      },
+      {
+        id: "3",
+        name: "This is fine"
+      },
+      {
+        id: "2",
+        name: "I do not like this"
+      },
+      {
+        id: "1",
+        name: "I do not like this at all"
+      }
+    ]
+  },
   value: {
     title: "Choose Artwork Value",
     questionText:
@@ -58,15 +104,5 @@ export const stageData = {
         name: "Below average"
       }
     ]
-  },
-  qualities: {
-    title: "Choose Qualities",
-    questionText:
-      "Please indicate how relevant the following qualities are at describing the artwork, with 0 indicating no relevance and 100 indicating very high relevance:"
-  },
-  preference: {
-    title: "Choose Your Preference",
-    questionText:
-      "What is your preference for this artwork?"
   }
 };

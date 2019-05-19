@@ -55,6 +55,8 @@ Empirica.gameInit(game => {
         valueOptions: experts
           ? stageData.value.expertOptions
           : stageData.value.layOptions,
+        prefOptions: stageData.preference.options,
+        qualityOptions: stageData.qualities.options,
         imagePath: randomArtwork.imagepath
       }
     });

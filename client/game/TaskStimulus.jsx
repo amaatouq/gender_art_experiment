@@ -11,7 +11,6 @@ export default class TaskStimulus extends React.Component {
     const imagePath = round.get("imagePath")
       ? round.get("imagePath")
       : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/600px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg";
-    console.log(imagePath);
     var questionText = stage.get("questionText");
     const subQuestionText = stage.get("subQuestionText");
 
