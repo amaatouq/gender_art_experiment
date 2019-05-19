@@ -17,7 +17,7 @@ export default class Consent extends React.Component {
             You can change your mind at any time and stop completing the survey without consequences. If you agree to be part of the research and to research data gathered from this survey being used in academic publication in a form that does not identify you, please continue with answering the survey questions. My name is Taylor Brown and I am a researcher at Duke University. If you have concerns about the research that you think I can help you with, please feel free to contact me on [phone number] or at [email address]. If you would like to talk to someone who is not connected with the research, you may contact the Duke University Research Ethics Officer at [phone number] or at [email address].
           </p>
           <br />
-          <ConsentButton color="OEDA83" text="I AGREE"/ >
+          <ConsentButton color="#OEDA83" text="I AGREE"/ >
         </div>
       </Centered>
     );

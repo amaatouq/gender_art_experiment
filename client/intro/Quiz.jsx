@@ -46,7 +46,7 @@ export default class Quiz extends React.Component {
             </p>
             <p>
               <label htmlFor="artcount">
-                How many artworks will you be evaluating?
+                How many artworks will you be shown?
               </label>
               <input
                 type="text"
@@ -65,7 +65,7 @@ export default class Quiz extends React.Component {
               <button type="button" onClick={onPrev} disabled={!hasPrev}>
                 Back to instructions
               </button>
-              <button type="submit">Next</button>
+              <button type="submit" style={{backgroundColor: "#F7625A"}}>Next</button>
             </p>
           </form>
         </div>

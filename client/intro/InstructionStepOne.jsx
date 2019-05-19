@@ -11,8 +11,7 @@ export default class InstructionStepOne extends React.Component {
         <div className="instructions">
           <h1>Instructions </h1>
           <p className="bp3-ui-text">
-            You will now be asked to describe, value, and state your preference
-            for 5 artworks by living artists.
+            You will now be asked to describe, value, and state your preference for 5 artworks by living artists.
           </p>
           <p className="bp3-ui-text">
             Before you answer, please{" "}
@@ -20,10 +19,7 @@ export default class InstructionStepOne extends React.Component {
             and{" "}<u>consider the
               accompanying information
             </u>{" "}
-            (e.g. size, medium, etc).{" "}
-          </p>
-          <p className="bp3-ui-text">
-            Please rely solely on your personal impressions.
+            (e.g. size, medium, etc).{" "}Please rely solely on your personal impressions.
           </p>
 
           <button
@@ -39,6 +35,7 @@ export default class InstructionStepOne extends React.Component {
             className="bp3-button"
             onClick={onNext}
             disabled={!hasNext}
+            style={{backgroundColor: "#F7625A"}}
           >
             Next
             <span className="bp3-icon-standard bp3-align-right" />
